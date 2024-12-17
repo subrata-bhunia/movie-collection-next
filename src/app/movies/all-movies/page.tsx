@@ -3,19 +3,19 @@ import { getAllMoviesByLanguage } from "@/lib/api";
 import { JSX } from "react";
 import Link from "next/link";
 
-async function AllMovies({
-  searchParams,
-}: {
-  searchParams: { lang?: string; page?: string };
+ async function AllMovies({
+//   searchParams,
+// }: {
+  // searchParams: { lang?: string; page?: string };
 }) {
-  const language = searchParams?.lang || "bn";
-  const currentPage = Number(searchParams?.page) || 1;
-  const movies = await getAllMoviesByLanguage(currentPage, language);
+  // const language = searchParams?.lang || "bn";
+  // const currentPage = Number(searchParams?.page) || 1;
+  const movies = await getAllMoviesByLanguage()
   
   return (
     <main className="flex min-h-screen flex-col items-center p-8">
       <h1 className="text-3xl font-bold mb-8">All Movies</h1>
-      <div className="flex flex-wrap gap-4 mb-6">
+      {/* <div className="flex flex-wrap gap-4 mb-6">
         <Link 
           href={`?lang=bn`}
           className={`px-4 py-2 rounded-md ${
@@ -96,14 +96,14 @@ async function AllMovies({
         >
           Marathi
         </Link>
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
         {movies.map((movie: JSX.IntrinsicAttributes & MovieCardProps) => (
           <MovieCard key={movie.id} {...movie}/>
         ))}
       </div>
 
-      <div className="flex gap-4 mt-4">
+      {/* <div className="flex gap-4 mt-4">
         {currentPage > 1 && (
           <Link
             href={`?lang=${language}&page=${currentPage - 1}`}
@@ -121,7 +121,7 @@ async function AllMovies({
         >
           Next
         </Link>
-      </div>
+      </div> */}
     </main>
   );
 }

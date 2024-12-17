@@ -4,11 +4,11 @@ import { JSX } from "react";
 import Link from "next/link";
 
 async function PopularPage({
-  searchParams,
-}: {
-  searchParams: { page?: string };
+//   searchParams,
+// }: {
+//   searchParams: { page?: string };
 }) {
-  const currentPage = Number(searchParams.page) || 1;
+  const currentPage = 1;
   const movies = await getPopularMovies(currentPage);
 
   return (
