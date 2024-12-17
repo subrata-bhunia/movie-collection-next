@@ -25,7 +25,7 @@ export default function MovieCard({
     const router =useRouter()
 
   const handleCardClick = () => {
-    router.push(`/details/${id}`);
+    router.push(`/movies/details/${id}`);
   };
 
   return (

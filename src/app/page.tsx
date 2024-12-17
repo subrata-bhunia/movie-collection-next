@@ -23,7 +23,7 @@ export default async function Home() {
           <nav className="flex items-center space-x-4">
             <ul className="flex space-x-4">
               <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/all-movies" className="hover:underline">Explore</a></li>
+              <li><a href="/movies/all-movies" className="hover:underline">Explore</a></li>
               <li><a href="#footer" className="hover:underline">Contact</a></li>
             </ul>
             <form action="/search-results" method="GET" className="flex items-center">
@@ -54,7 +54,7 @@ export default async function Home() {
           <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Welcome to Movie World</h1>
             <p className="text-lg mb-6">Discover the latest and greatest movies</p>
-            <a href="/all-movies" className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark">
+            <a href="/movies/all-movies" className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark">
               Explore Now
             </a>
           </div>
@@ -65,7 +65,7 @@ export default async function Home() {
           <section className="mb-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-semibold">Currently playing</h2>
-              <a href="/now-playing" className="text-sm text-gray-400 hover:text-foreground">
+              <a href="/movies/now-playing" className="text-sm text-gray-400 hover:text-foreground">
                 see more →
               </a>
             </div>
@@ -83,7 +83,7 @@ export default async function Home() {
           <section className="mb-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-semibold">Popular Movies</h2>
-              <a href="/popular" className="text-sm text-gray-400 hover:text-foreground">
+              <a href="/movies/popular" className="text-sm text-gray-400 hover:text-foreground">
                 see more →
               </a>
             </div>
@@ -100,7 +100,7 @@ export default async function Home() {
           <section className="mb-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-semibold">Top Rated Movies</h2>
-              <a href="/top-rated" className="text-sm text-gray-400 hover:text-foreground">
+              <a href="/movies/top-rated" className="text-sm text-gray-400 hover:text-foreground">
                 see more →
               </a>
             </div>
